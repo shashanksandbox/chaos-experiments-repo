@@ -1,0 +1,32 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChartServiceVersion
+metadata:
+  annotations:
+    categories: ""
+    chartDescription: ""
+    createdAt: ""
+    repository: ""
+    support: ""
+    vendor: ""
+  name: dependencies-latencies
+packageInfo:
+  experiments: null
+  packageName: ""
+spec:
+  categoryDescription: To induce latency between dependencies to test the behaviour
+    of application
+  displayName: dependencies-latencies
+  experiments: null
+  faults:
+  - chaosType: ""
+    description: ""
+    displayName: ""
+    name: pod-network-latency-he9
+    plan: null
+    supportedVersion: null
+  keywords:
+  - Dependency
+  plan: null
+  provider:
+    name: ""
+  scenarios: null
