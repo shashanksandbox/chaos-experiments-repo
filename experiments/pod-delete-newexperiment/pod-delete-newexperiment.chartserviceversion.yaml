@@ -1,0 +1,31 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChartServiceVersion
+metadata:
+  annotations:
+    categories: ""
+    chartDescription: ""
+    createdAt: ""
+    repository: ""
+    support: ""
+    vendor: ""
+  name: pod-delete-newexperiment
+packageInfo:
+  experiments: null
+  packageName: ""
+spec:
+  categoryDescription: To test the redundancy of application
+  displayName: pod-delete-newexperiment
+  experiments: null
+  faults:
+  - chaosType: ""
+    description: ""
+    displayName: ""
+    name: pod-delete-o2z
+    plan: null
+    supportedVersion: null
+  keywords:
+  - Redundancy
+  plan: null
+  provider:
+    name: ""
+  scenarios: null
