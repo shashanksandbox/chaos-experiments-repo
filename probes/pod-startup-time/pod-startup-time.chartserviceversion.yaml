@@ -1,0 +1,26 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChartServiceVersion
+metadata:
+  annotations:
+    categories: ""
+    chartDescription: ""
+    createdAt: ""
+    repository: ""
+    support: ""
+    vendor: ""
+  name: pod-startup-time
+packageInfo:
+  experiments: null
+  packageName: ""
+spec:
+  categoryDescription: ""
+  displayName: pod-startup-time
+  experiments: null
+  faults: null
+  identity: ""
+  infras: null
+  keywords: []
+  plan: null
+  provider:
+    name: ""
+  scenarios: null

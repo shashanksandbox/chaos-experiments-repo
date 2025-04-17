@@ -1,0 +1,4 @@
+probes:
+- infraType: Kubernetes
+  name: pod-startup-time
+  type: cmdProbe

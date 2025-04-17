@@ -1,0 +1,19 @@
+cmdProbe/inputs:
+  command: python3 script.py
+  comparator:
+    criteria: <=
+    type: float
+    value: "120000"
+  source:
+    env:
+    - name: K8s
+    image: ""
+mode: Continuous
+name: pod-startup-time
+runProperties:
+  attempt: 1
+  initialDelay: 5s
+  interval: 2s
+  probeTimeout: 10s
+  verbosity: debug
+type: cmdProbe
