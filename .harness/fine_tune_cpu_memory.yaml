@@ -1,0 +1,58 @@
+pipeline:
+  name: fine_tune_cpu_memory
+  identifier: fine_tune_cpu_memory
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: cpu_memory
+        identifier: cpu_memory
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: Start_Load_Test
+                  identifier: Start_Load_Test
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "blazemeter"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+              - step:
+                  type: Chaos
+                  name: CPU_Hog
+                  identifier: CPU_Hog
+                  spec:
+                    experimentRef: ef4befcf-030f-40b2-8e5f-4af7d33c483d
+                    expectedResilienceScore: 50
+              - step:
+                  type: Chaos
+                  name: Memory Hog
+                  identifier: Memory_Hog
+                  spec:
+                    experimentRef: aa3d4993-2f27-4c6c-8d73-346b58c0274d
+                    expectedResilienceScore: 50
+              - step:
+                  type: ShellScript
+                  name: Stop Load
+                  identifier: Stop_Load
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "test"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
