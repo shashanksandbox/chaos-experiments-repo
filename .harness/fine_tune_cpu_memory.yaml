@@ -56,3 +56,19 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+    - stage:
+        name: Prod_Stage
+        identifier: Prod_Stage
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Chaos
+                  name: Chaos_1
+                  identifier: Chaos_1
+                  spec:
+                    experimentRef: d1bd7b63-beee-4819-b3b8-2922332745bc
+                    expectedResilienceScore: 50
+        tags: {}
