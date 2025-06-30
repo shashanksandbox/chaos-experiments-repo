@@ -6,7 +6,7 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: cpu_memory
+        name: Dev_Stage
         identifier: cpu_memory
         description: ""
         type: Custom
