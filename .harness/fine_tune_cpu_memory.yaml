@@ -72,3 +72,26 @@ pipeline:
                     experimentRef: d1bd7b63-beee-4819-b3b8-2922332745bc
                     expectedResilienceScore: 50
         tags: {}
+    - stage:
+        name: test
+        identifier: test
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: gcp_webapp
+                  identifier: gcp_webapp
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "test"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
